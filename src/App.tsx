@@ -1,10 +1,13 @@
 import AddTrial from './pages/AddTrial'
 import './App.css'
+import TrialProvider from './context/trialContext'
 
 function App() {
   return (
     <>
-      <AddTrial />
+      <TrialProvider>
+        <AddTrial />
+      </TrialProvider>
     </>
   )
 }
