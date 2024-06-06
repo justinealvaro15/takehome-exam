@@ -1,0 +1,15 @@
+.trial-status-pill-root {
+    padding: 6px;
+    border-radius: 18px;
+    background-color: #DC362E;
+}
+
+.trial-status-pill-label {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: white;
+    margin: 0;
+}
