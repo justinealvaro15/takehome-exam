@@ -1,0 +1,15 @@
+.text-input-root {
+    background-color: #002E24;
+    border: 1px solid #00AD8A;
+    width: 100%;
+    padding: 12px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    text-align: left;
+    color: #DCDCDC;
+}
+
+.text-input-root:focus-visible {
+    outline-width: 0;
+}

@@ -4,7 +4,9 @@
     padding-bottom: 16px;
 }
 
-.set-trial-param-row {
+.set-trial-param-content {
     display: flex;
     flex-direction: column;
+    gap: 12px;
+    width: 100%;
 }

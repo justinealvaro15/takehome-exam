@@ -9,7 +9,7 @@ export type TrialContextType = {
     onObjectiveChange: (value: ObjectiveValue) => void;
     onDurationChange: (value: number) => void;
     onRewardsChange: (rewards: string) => void;
-    onMaxPayoutChange: (value: number) => void;
+    onMaxPayoutChange: (value: string) => void;
 };
 
 export const TrialContext = createContext<Partial<TrialContextType>>({});
@@ -23,8 +23,17 @@ const TrialProvider: React.FC<{children: React.ReactNode}> = ({ children }) => {
     const handleObjectiveChange = (value: ObjectiveValue) => setObjective(value);
     const handleDurationChange = (value: number) => setDuration(value);
     const handleRewardsChange = (value: string) => setRewards(value);
-    const handleMaxPayoutChange = (value: number) => setMaxPayout(value);
+    const handleMaxPayoutChange = (value: string) => {
+        const numberOnlyCondition = /^\d+$/;
 
+        if (value === '') {
+            setMaxPayout?.(0);
+        }
+
+        if (value.match(numberOnlyCondition)) {
+            setMaxPayout?.(parseInt(value));
+        }
+    };
 
     return (
         <TrialContext.Provider
