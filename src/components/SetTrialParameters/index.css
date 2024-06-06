@@ -7,6 +7,12 @@
 .set-trial-param-content {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 32px;
     width: 100%;
+}
+
+.set-trial-param-field {
+    max-width: 700px;
+    width: 100%;
+    display: flex;
 }

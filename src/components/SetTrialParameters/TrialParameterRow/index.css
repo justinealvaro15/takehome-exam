@@ -1,12 +1,11 @@
 .trial-parameter-root {
     display: flex;
-    justify-content: space-between;
 }
 
 .trial-parameter-info {
     display: flex;
     flex-direction: column;
-    min-width: 400px;
+    min-width: 450px;
     flex-wrap: wrap;
 }
 

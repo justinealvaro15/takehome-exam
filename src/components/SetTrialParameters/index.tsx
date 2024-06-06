@@ -38,21 +38,25 @@ const SetTrialParameters = () => {
                         name="Rewards"
                         description="Set rewards to be won by the Trial winners"
                     >
-                        <TextInput
-                            value={rewards}
-                            onChange={(e) => onRewardsChange?.(e.target.value)}
-                            placeholder="Enter reward"
-                        />
+                        <div className="set-trial-param-field">
+                            <TextInput
+                                value={rewards}
+                                onChange={(e) => onRewardsChange?.(e.target.value)}
+                                placeholder="Enter reward"
+                            />
+                        </div>
                     </TrialParameterRow>
                     <TrialParameterRow
                         name="Maximum Payouts"
                         description="Set maximum number of payouts to be won"
                     >
-                        <TextInput
-                            value={maxPayout}
-                            onChange={(e) => onMaxPayoutChange?.(e.target.value)}
-                            placeholder="Enter payout"
-                        />
+                        <div className="set-trial-param-field">
+                            <TextInput
+                                value={maxPayout}
+                                onChange={(e) => onMaxPayoutChange?.(e.target.value)}
+                                placeholder="Enter payout"
+                            />
+                        </div>
                     </TrialParameterRow>
                 </div>
             </Card>
