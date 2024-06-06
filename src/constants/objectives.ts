@@ -1,11 +1,17 @@
+export enum ObjectiveValue {
+  Rookie = 'ROOKIE',
+  ThreeMinuteMiracle = 'THREE_MINUTE_MIRACLE',
+  GunsBlazing = 'GUNS_BLAZING',
+}
+
 type Objective = {
   label: Array<{
     display: string
   }>
   name: string
   description: string
+  value: ObjectiveValue
 }
-
 const objectives: Array<Objective> = [
   {
     label: [
@@ -17,8 +23,9 @@ const objectives: Array<Objective> = [
       }
     ],
     name: 'Rookie',
-    description: 'Get 25 kills in a match won'
-  }, 
+    description: 'Get 25 kills in a match won',
+    value: ObjectiveValue.Rookie,
+  },
   {
     label: [
       {
@@ -29,7 +36,8 @@ const objectives: Array<Objective> = [
       }
     ],
     name: '3 Minute Miracle',
-    description: 'Get 1 pentakill within the first 3 minutes and win the match'
+    description: 'Get 1 pentakill within the first 3 minutes and win the match',
+    value: ObjectiveValue.ThreeMinuteMiracle,
   },
   {
     label: [
@@ -38,7 +46,8 @@ const objectives: Array<Objective> = [
       }
     ],
     name: 'Guns Blazing',
-    description: 'Get 10 kills within the first 8 minutes of the match'
+    description: 'Get 10 kills within the first 8 minutes of the match',
+    value: ObjectiveValue.GunsBlazing,
   }
 ] as const
 

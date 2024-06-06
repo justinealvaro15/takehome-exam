@@ -1,0 +1,16 @@
+.set-objective-root {
+    display: flex;
+    width: 100%;
+    padding-bottom: 16px;
+}
+
+.set-objective-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.set-objective-row > * {
+    flex: 1 1 350px;
+}

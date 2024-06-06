@@ -1,6 +1,10 @@
+import SetObjective from "../../components/SetObjective";
+
 const AddTrial = () => {
     return (
-        <div>Hello World</div>
+        <div className="add-trial">
+            <SetObjective />
+        </div>
     );
 };
 
