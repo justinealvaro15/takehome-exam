@@ -1,0 +1,29 @@
+.toggle-radio-root {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+}
+
+.toggle-radio-item {
+    display: flex;
+    height: 46px;
+    background-color: #1D1D1D;
+    border: 1px solid #2A2A2A;
+    min-width: 150px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-radio-active {
+    background-color: #002E24;
+    border: 1px solid #00E0B3;
+}
+
+.toggle-radio-label {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    text-align: center;
+    margin: 0;
+}

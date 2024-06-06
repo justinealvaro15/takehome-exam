@@ -1,0 +1,29 @@
+.trial-parameter-root {
+    display: flex;
+    justify-content: space-between;
+}
+
+.trial-parameter-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    flex-wrap: wrap;
+}
+
+.trial-parameter-name {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    text-align: left;
+    color: #DCDCDC;
+    margin: 0;
+}
+
+.trial-parameter-description {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    color: #909090;
+    margin: 0;
+}
