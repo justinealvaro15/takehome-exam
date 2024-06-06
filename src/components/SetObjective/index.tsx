@@ -42,6 +42,7 @@ const SetObjective = () => {
                                 icon={icon}
                                 selected={value === objective}
                                 onClick={handleClick}
+                                key={value}
                             />
                         );
                     })}

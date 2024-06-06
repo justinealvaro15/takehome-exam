@@ -19,7 +19,7 @@ const ToggleRadio = ({ options, currentValue, onClick }: ToggleRadioProps) => {
                 const selected = value === currentValue;
                 const handleClick = () => onClick?.(value);
                 return (
-                    <div className={clsx('toggle-radio-item', selected && 'toggle-radio-active')} onClick={handleClick}>
+                    <div className={clsx('toggle-radio-item', selected && 'toggle-radio-active')} onClick={handleClick} key={value}>
                         <p className="toggle-radio-label">{label}</p>
                     </div>
                 );
