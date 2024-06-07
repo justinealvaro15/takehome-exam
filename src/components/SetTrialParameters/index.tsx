@@ -43,6 +43,7 @@ const SetTrialParameters = () => {
                                 value={rewards}
                                 onChange={(e) => onRewardsChange?.(e.target.value)}
                                 placeholder="Enter reward"
+                                maxLength={45}
                             />
                         </div>
                     </TrialParameterRow>
@@ -55,6 +56,7 @@ const SetTrialParameters = () => {
                                 value={maxPayout}
                                 onChange={(e) => onMaxPayoutChange?.(e.target.value)}
                                 placeholder="Enter payout"
+                                maxLength={10}
                             />
                         </div>
                     </TrialParameterRow>

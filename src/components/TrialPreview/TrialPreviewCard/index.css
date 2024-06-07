@@ -67,6 +67,13 @@
     color: white;
     z-index: 2;
     margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    inline-size: 312px;
 }
 
 .trial-preview-card-data {
@@ -88,6 +95,9 @@
     text-align: left;
     color: #00E0B3;
     margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .trial-preview-card-data-description {
