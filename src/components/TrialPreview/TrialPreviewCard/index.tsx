@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 import objectives, { ObjectiveValue } from '../../../constants/objectives';
 
+import TrialPreviewCardRow from './TrialPreviewCardRow';
 import TrialStatusBadge from '../TrialStatusBadge';
 import DiamondIcon from '../../../assets/diamond.svg?react';
 import AvatarIcon from '../../../assets/avatar.svg?react';
@@ -22,7 +23,6 @@ const TrialPreviewCard = ({
     duration,
     rewards,
     maxPayout,
-
 }: TrialPreviewCardProps) => {
     const { name: objectiveName, label: objectiveLabels } = objectives.find((obj) => obj.value === objective) ?? {};
 
@@ -53,25 +53,19 @@ const TrialPreviewCard = ({
                 <DiamondIcon className="trial-preview-card-reward-icon" />
             </div>
             <div className="trial-preview-card-data">
-                <div className="trial-preview-card-data-row">
-                    <p className="trial-preview-card-header-title">TIME LEFT</p>
-                    <p className="trial-preview-card-data-value">{formattedDuration}</p>
-                </div>
-                <div className="trial-preview-card-data-row">
-                    <p className="trial-preview-card-header-title">PAYOUTS LEFT</p>
-                    <p className="trial-preview-card-data-value">{maxPayout}/{maxPayout}</p>
-                </div>
-                <div className="trial-preview-card-data-row">
-                    <p className="trial-preview-card-header-title">OBJECTIVE</p>
-                    <p className="trial-preview-card-data-value">{objectiveName}</p>
-                    <div>
-                        {objectiveLabels?.map((label) => (
-                            <p className="trial-preview-card-data-description" key={label.display}>
-                                {label.display}
-                            </p>
-                        ))}
-                    </div>
-                </div>
+                <TrialPreviewCardRow
+                    name="TIME LEFT"
+                    description={formattedDuration}
+                />
+                <TrialPreviewCardRow
+                    name="PAYOUTS LEFT"
+                    description={`${maxPayout}/${maxPayout}`}
+                />
+                <TrialPreviewCardRow
+                    name="OBJECTIVE"
+                    description={objectiveName}
+                    supportingInfo={objectiveLabels}
+                />
             </div>
         </div>
     );
