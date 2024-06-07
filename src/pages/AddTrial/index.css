@@ -1,5 +1,13 @@
 .add-trial {
     display: flex;
     width: 100%;
-    height: 100%;
+    max-height: 100vh;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.add-trial-fields {
+    display: flex;
+    flex-direction: column;
 }

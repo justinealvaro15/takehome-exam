@@ -1,6 +1,7 @@
 .trial-preview-root {
     display: flex;
     width: 100%;
+    max-width: 580px;
     padding-bottom: 16px;
 }
 
@@ -9,4 +10,12 @@
     align-self: center;
     justify-content: center;
     width: 100%;
+    min-width: 345px;
+}
+
+@media (max-width: 2100px) {
+    .trial-preview-root {
+        max-width: 1419px;
+        width: 100%;
+    }
 }
