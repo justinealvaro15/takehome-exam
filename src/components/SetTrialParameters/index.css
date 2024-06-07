@@ -4,6 +4,12 @@
     padding-bottom: 16px;
 }
 
+@media (max-width: 2100px) {
+    .set-trial-param-root {
+        padding-bottom: 0;
+    }
+}
+
 .set-trial-param-content {
     display: flex;
     flex-direction: column;
